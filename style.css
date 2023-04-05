@@ -1,9 +1,14 @@
+html {
+    background-image: url(./img/preview-1.jpg);
+}
+
 h1 {
     display: block;
     text-align: center;
 }
 
 canvas {
+    background-image: url(./img/space-asteroid-surface-planet-with-craters-surface-space-planets-landscape-comet-crater-cartoon-illustration_102902-834.jpg);
     display: block;
     width: 756px;
     height: 600px;
