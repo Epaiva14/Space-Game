@@ -5,14 +5,16 @@ h1 {
 
 canvas {
     display: block;
-    width: 800px;
+    width: 756px;
     height: 600px;
-    grid-column-start: 2;
+    grid-column-start: 4;
+    background-repeat: repeat;
+    background-color: #222;
 }
 
 #playarea {
     display: grid;
-    grid-template-columns: repeat(5, 20%);
+    grid-template-columns: repeat(10, 10%);
     margin: 0 auto;
 
 }

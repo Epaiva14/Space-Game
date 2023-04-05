@@ -4,29 +4,30 @@ let alien1;
 let alien2;
 let alien3;
 let alien4;
+const astro = document.getElementById('astroImg');
 const game = document.getElementById('game');
 const ctx = game.getContext('2d');
 // ====================== PAINT INTIAL SCREEN ======================= //
 
 // EVENT LISTENERS
 window.addEventListener('DOMContentLoaded', function () {
+    astronaut = new spaceMan()
 
 })
 // ====================== SETUP FOR CANVAS RENDERING ======================= //
 
 // ====================== ENTITIES ======================= //
 class spaceMan {
-    constructor(x, y, color, width, height) {
+    constructor(x, y, image, width, height) {
         this.x = x;
         this.y = y;
-        this.color = color;
+        this.image = image;
         this.height = height;
         this.width = width;
         this.alive = true;
 
         this.render = function () {
-            ctx.fillStyle = this.color;
-            ctx.fillRect(this.x, this.y, this.width, this.height);
+            ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
         }
     }
 }
