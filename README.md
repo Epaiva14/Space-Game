@@ -19,3 +19,15 @@ the astronaut can only be touched twice, and upon the third touch, the astronaut
 
 Copy and clone this repo to your terminal, and open index.html
 
+
+## Techniques used ~~~~
+
+```javascript
+#playarea {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    margin: 0 auto;
+
+}
+```
+

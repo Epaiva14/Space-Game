@@ -7,4 +7,12 @@ canvas {
     display: block;
     width: 800px;
     height: 600px;
+    grid-column-start: 2;
+}
+
+#playarea {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    margin: 0 auto;
+
 }
