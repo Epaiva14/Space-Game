@@ -5,6 +5,7 @@ let alien2;
 let alien3;
 let alien4;
 let plasmaWeapon;
+let randomEnemy;
 const alienImg1 = document.getElementById('alien1');
 const alienImg2 = document.getElementById('alien2');
 const alienImg3 = document.getElementById('alien3');
@@ -133,10 +134,18 @@ function alienWalk() {
 
 // ====================== HELPER FUNCTIONS ======================= //
 function spawnAlien1() {
-    if (alien1.not.alive) {
-        alien1.render();
-    }
+    alien1.alive = false;
+
+    setTimeout(function () {
+        let randomX = Math.floor(Math.random() * (game.width - 50));
+        let zeroY = game.height - 600;
+        const alienType = [alienImg1, alienImg2, alienImg3, alienImg4];
+        let randomIndex = Math.floor(Math.random() * (alienType.length - 1));
+        let randomAlien = alienType[randomIndex];
+        alien1 = new Alien(randomX, zeroY, randomAlien, 50, 50)
+    }, 1000);
 }
+
 function spawnAlien2() {
     if (alien2.not.alive) {
         alien2.render();
@@ -165,9 +174,7 @@ function gameLoop() {
 
     if (alien1.alive) {
         alien1.render();
-        alien2.render();
-        alien3.render();
-        alien4.render();
+        let hit = detectHit(astronaut, alien1);
     }
     astronaut.render();
     // spaceWalk();
@@ -190,5 +197,9 @@ function detectHit(player, opponent) {
         // add 1 point to current score
         let newScore = Number(score.textContent) + 1;
         score.textContent = newScore;
+
+        return spawnAlien1();
+    } else {
+        return false;
     }
 }
