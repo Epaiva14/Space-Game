@@ -126,21 +126,53 @@ function spaceWalk(e) {
 setInterval(alienWalk, 1000);
 
 function alienWalk() {
-    alien2.y += 7;
-    alien3.y += 5;
-    alien4.y += 13;
-    console.log(alien1.y, alien1.x);
-    if (alien1.y <= 560 && alien1.direction === 'down') {
-        alien1.y += 40;
-        console.log('down ---', alien1.y);
+    if (alien1.y <= 520 && alien1.direction === 'down') {
+        alien1.y += 30;
     } else if (alien1.y <= 0 && alien1.direction === 'up') {
-        alien1.y += 40;
+        alien1.y += 30;
         alien1.direction = 'down';
-        console.log('down at 0 --', alien1.y);
     } else {
         alien1.direction = 'up';
-        alien1.y -= 40;
-        console.log('up---', alien1.y);
+        alien1.y -= 30;
+    }
+
+    if (alien2.y <= 540 && alien2.direction === 'down') {
+        alien2.y += 45;
+        console.log('down ---', alien2.y);
+    } else if (alien2.y <= 0 && alien2.direction === 'up') {
+        alien2.y += 45;
+        alien2.direction = 'down';
+        console.log('down at 0 --', alien2.y);
+    } else {
+        alien2.direction = 'up';
+        alien2.y -= 45;
+        console.log('up---', alien2.y);
+    }
+
+    if (alien3.y <= 540 && alien3.direction === 'down') {
+        alien3.y += 40;
+        console.log('down ---', alien3.y);
+    } else if (alien3.y <= 0 && alien3.direction === 'up') {
+        alien3.y += 40;
+        alien3.direction = 'down';
+        console.log('down at 0 --', alien3.y);
+    } else {
+        alien3.direction = 'up';
+        alien3.y -= 40;
+        console.log('up---', alien3.y);
+    }
+
+    if (alien4.y <= 560 && alien4.direction === 'down') {
+        alien4.y += 20;
+        console.log('down ---', alien4.y);
+    } else if (alien4.y <= 0 && alien4.direction === 'up') {
+        alien4.y += 20;
+        alien4.direction = 'down';
+        console.log('down at 0 --', alien4.y);
+    } else {
+        alien4.direction = 'up';
+        alien4.y -= 20;
+        console.log('up---', alien4.y);
     }
 }
 
