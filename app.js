@@ -62,6 +62,8 @@ class Alien {
         this.height = 50;
         this.width = 50;
         this.alive = true;
+        this.direction = 'down';
+
 
 
         this.render = function () {
@@ -124,13 +126,22 @@ function spaceWalk(e) {
 setInterval(alienWalk, 1000);
 
 function alienWalk() {
-    alien1.y += 10;
     alien2.y += 7;
     alien3.y += 5;
     alien4.y += 13;
-    // if (alien1.y === game.height) {
-    //     alien1.y -= 0;
-    // }
+    console.log(alien1.y, alien1.x);
+    if (alien1.y <= 560 && alien1.direction === 'down') {
+        alien1.y += 40;
+        console.log('down ---', alien1.y);
+    } else if (alien1.y <= 0 && alien1.direction === 'up') {
+        alien1.y += 40;
+        alien1.direction = 'down';
+        console.log('down at 0 --', alien1.y);
+    } else {
+        alien1.direction = 'up';
+        alien1.y -= 40;
+        console.log('up---', alien1.y);
+    }
 }
 
 
@@ -235,12 +246,12 @@ function detectHit(player, opponent) {
         score.textContent = newScore;
 
         return spawnAlien1()
+
     } else {
         return false;
     }
-
-
 }
+
 function detectHit2(player, opponent) {
     let hitTest = (player.y + player.height > opponent.y &&
         player.y < opponent.y + opponent.height &&
@@ -257,8 +268,6 @@ function detectHit2(player, opponent) {
     } else {
         return false;
     }
-
-
 }
 function detectHit3(player, opponent) {
     let hitTest = (player.y + player.height > opponent.y &&
@@ -276,8 +285,6 @@ function detectHit3(player, opponent) {
     } else {
         return false;
     }
-
-
 }
 function detectHit4(player, opponent) {
     let hitTest = (player.y + player.height > opponent.y &&
@@ -295,6 +302,4 @@ function detectHit4(player, opponent) {
     } else {
         return false;
     }
-
-
 }
