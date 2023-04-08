@@ -25,5 +25,21 @@ canvas {
     display: grid;
     grid-template-columns: repeat(10, 10%);
     margin: 0 auto;
+}
 
+#top-left,
+#top-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+}
+
+#top-left {
+    grid-area: top-left;
+}
+
+#top-right {
+    grid-area: top-right;
+    background-color: #222;
 }
