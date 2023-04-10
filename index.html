@@ -21,12 +21,23 @@
     </div>
     <h1>Space Astronaut Fends Off the Hoarde!</h1>
     <div id="playarea">
-        <aside id="top-left"></aside>
-        <h2>Humans Vs Aliens</h2>
-        <aside id="top-right"></aside>
+        <aside id="top-left">
+            <p id="timer"></p>
+        </aside>
+        <h2>Collect the Specimens before time runs out!</h2>
+        <aside id="top-right">
+
+        </aside>
         <h2 id="score">0</h2>
         <canvas id="game"><!-- this is where the game is played --></canvas>
+        <aside id="startButton">
+            <button id="start">Start Game</button>
+        </aside>
+        <aside id="resetButton">
+            <button type="reset" id="reset">Reset Score</button>
+        </aside>
     </div>
+
     <script src="./app.js"></script>
 </body>
 

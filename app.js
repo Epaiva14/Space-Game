@@ -15,16 +15,17 @@ const astro = document.getElementById('astroImg');
 const score = document.getElementById('score');
 const game = document.getElementById('game');
 const ctx = game.getContext('2d');
+const restartButton = document.getElementById('reset');
 // ====================== PAINT INTIAL SCREEN ======================= //
 
 // EVENT LISTENERS
 // loads all characters in the game
 window.addEventListener('DOMContentLoaded', function () {
-    astronaut = new Spaceman(350, 525);
+    astronaut = new Spaceman(game.height / 2, game.width / 2);
     alien1 = new Alien(0, 0, alienImg1);
-    alien2 = new Alien(200, 0, alienImg2);
+    alien2 = new Alien(200, 560, alienImg2);
     alien3 = new Alien(400, 0, alienImg3);
-    alien4 = new Alien(600, 0, alienImg4);
+    alien4 = new Alien(600, 560, alienImg4);
     plasmaWeapon = new Weapon(astronaut.x, astronaut.y, plasma, 50, 50);
     const runGame = this.setInterval(gameLoop, 60);
 })
@@ -63,8 +64,6 @@ class Alien {
         this.width = 50;
         this.alive = true;
         this.direction = 'down';
-
-
 
         this.render = function () {
             ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
@@ -184,11 +183,11 @@ function spawnAlien1() {
 
     setTimeout(function () {
         let randomX = Math.floor(Math.random() * (game.width - 50));
-        let zeroY = game.height - 600;
+        let randomY = Math.floor(Math.random() * (game.height - 50));
         const alienType = [alienImg1, alienImg2, alienImg3, alienImg4];
         let randomIndex = Math.floor(Math.random() * (alienType.length - 1));
         let randomAlien = alienType[randomIndex];
-        alien1 = new Alien(randomX, zeroY, randomAlien, 50, 50)
+        alien1 = new Alien(randomX, randomY, randomAlien, 50, 50)
     }, 1000);
 }
 
@@ -204,6 +203,7 @@ function spawnAlien2() {
         alien2 = new Alien(randomX, zeroY, randomAlien, 50, 50)
     }, 1000);
 }
+
 function spawnAlien3() {
     alien3.alive = false;
 
@@ -216,6 +216,7 @@ function spawnAlien3() {
         alien3 = new Alien(randomX, zeroY, randomAlien, 50, 50)
     }, 1000);
 }
+
 function spawnAlien4() {
     alien4.alive = false;
 
@@ -256,12 +257,10 @@ function gameLoop() {
         let hit = detectHit4(astronaut, alien4);
     }
     astronaut.render();
+
     // spaceWalk();
     // plasmaWeapon.render();
-
-
     console.log('game loop--------------')
-
 }
 // ====================== COLLISION DETECTION ======================= //
 
@@ -277,6 +276,10 @@ function detectHit(player, opponent) {
         let newScore = Number(score.textContent) + 1;
         score.textContent = newScore;
 
+        if (newScore >= 30) {
+            clearInterval(intervalTimer);
+            endGame();
+        }
         return spawnAlien1()
 
     } else {
@@ -296,6 +299,10 @@ function detectHit2(player, opponent) {
         let newScore = Number(score.textContent) + 1;
         score.textContent = newScore;
 
+        if (newScore >= 30) {
+            clearInterval(intervalTimer);
+            endGame();
+        }
         return spawnAlien2()
     } else {
         return false;
@@ -309,11 +316,16 @@ function detectHit3(player, opponent) {
     );
 
     if (hitTest) {
-        // add 1 point to current score
         let newScore = Number(score.textContent) + 1;
         score.textContent = newScore;
 
+        if (newScore >= 30) {
+            clearInterval(intervalTimer);
+            endGame();
+        }
+
         return spawnAlien3()
+
     } else {
         return false;
     }
@@ -330,8 +342,61 @@ function detectHit4(player, opponent) {
         let newScore = Number(score.textContent) + 1;
         score.textContent = newScore;
 
+        if (newScore >= 30) {
+            clearInterval(intervalTimer);
+            endGame();
+        }
+
         return spawnAlien4()
     } else {
         return false;
     }
+
+}
+
+//=========================BUTTONS & END GAME======================//
+const startButton = document.getElementById('start');
+startButton.addEventListener('click', function () {
+    //to start the timer, and register endgame status
+    startGame();
+    console.log('START GAME BUTTON', startButton);
+});
+
+
+restartButton.addEventListener('click', function () {
+    score.textContent = 0;
+});
+
+
+let countDownTime = 30; // 30 seconds countdown
+
+function startGame() {
+    intervalTimer = setInterval(function () {
+        countDownTime -= 1;
+        timer.textContent = countDownTime;
+
+        if (countDownTime <= 0) {
+            clearInterval(intervalTimer);
+            endGame();
+        }
+    }, 1000);
+
+    spawnAlien1();
+    spawnAlien2();
+    spawnAlien3();
+    spawnAlien4();
+}
+
+function endGame() {
+    // determine the winner
+    let winner;
+    if (Number(score.textContent) >= 30) {
+        winner = "Player";
+        alert(`${winner} wins!`);
+    } else {
+        alert(`You failed to collect the Specimens in time!`);
+    }
+
+    // display the winner and end the game
+    document.location.reload();
 }

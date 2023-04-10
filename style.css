@@ -2,7 +2,8 @@ body {
     background-image: url(./img/preview-1.jpg);
 }
 
-h1 {
+h1,
+h2 {
     display: block;
     text-align: center;
     color: rgb(226, 198, 43);
@@ -22,9 +23,7 @@ canvas {
 }
 
 #playarea {
-
     grid-template-columns: repeat(10, 10%);
-
     max-width: 50em;
     height: 70vh;
     background-color: rgb(111, 24, 91);
@@ -44,7 +43,7 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./img/Astronaut\ \(1\).png);
+    /* background-image: url(./img/Astronaut\ \(1\).png); */
 }
 
 #top-left {
@@ -54,4 +53,20 @@ canvas {
 #top-right {
     grid-area: top-right;
     background-color: rgb(226, 198, 43);
+}
+
+
+#reset {
+    position: relative;
+    bottom: 550px;
+}
+
+#start {
+    position: relative;
+    bottom: 550px;
+}
+
+#timer {
+    font-size: x-large;
+    color: rgb(226, 198, 43);
 }
