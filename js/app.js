@@ -16,6 +16,7 @@ const score = document.getElementById('score');
 const game = document.getElementById('game');
 const ctx = game.getContext('2d');
 const restartButton = document.getElementById('reset');
+
 // ====================== PAINT INTIAL SCREEN ======================= //
 
 // EVENT LISTENERS
@@ -40,7 +41,7 @@ game.setAttribute('height', getComputedStyle(game)['height']);
 game.setAttribute('width', getComputedStyle(game)['width']);
 // ====================== ENTITIES ======================= //
 class Spaceman {
-    constructor(x, y,) {
+    constructor(x, y) {
         this.x = x;
         this.y = y;
         this.image = astro;
