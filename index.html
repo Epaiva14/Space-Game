@@ -19,23 +19,35 @@
         <img src="./img/alien3.png" alt="alien3" id="alien3" style="display: none;">
         <img src="./img/alien4.png" alt="alien4" id="alien4" style="display: none;">
     </div>
-    <h1>Space Astronaut Fends Off the Hoarde!</h1>
     <div id="playarea">
         <aside id="top-left">
             <p id="timer"></p>
+            <h2 id="score">0</h2>
         </aside>
-        <h2>Collect the Specimens before time runs out!</h2>
-        <aside id="top-right">
 
-        </aside>
-        <h2 id="score">0</h2>
-        <canvas id="game"><!-- this is where the game is played --></canvas>
+        <h1 id="gameTitle">Collect the Specimens before time runs out!</h1>
+
         <aside id="startButton">
             <button id="start">Start Game</button>
         </aside>
+
         <aside id="resetButton">
             <button type="reset" id="reset">Reset Score</button>
         </aside>
+
+        <aside id="top-right">
+            <ul id="directions">
+                <li>Use W-A-S-D to move</li>
+                <hr>
+                <li>Collect 30 Specimen in 30 Seconds to Win</li>
+            </ul>
+        </aside>
+
+
+
+        <canvas id="game"><!-- this is where the game is played --></canvas>
+
+
     </div>
 
     <script src="./app.js"></script>

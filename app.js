@@ -100,13 +100,13 @@ function spaceWalk(e) {
     // console.log('walking :', e.key);
 
     if (e.key === 'Arrow Left' || e.key === 'a') {
-        astronaut.x - 30 >= 0 ? (astronaut.x -= 30) : null;
+        astronaut.x - 32 >= 0 ? (astronaut.x -= 32) : null;
     } else if (e.key === 'Arrow Right' || e.key === 'd') {
-        astronaut.x + 30 <= game.width - astronaut.width ? (astronaut.x += 30) : null;
+        astronaut.x + 32 <= game.width - astronaut.width ? (astronaut.x += 32) : null;
     } else if (e.key === 'Arrow Up' || e.key === 'w') {
-        astronaut.y - 30 >= 0 ? (astronaut.y -= 30) : null;
+        astronaut.y - 32 >= 0 ? (astronaut.y -= 32) : null;
     } else if (e.key === 'Arrow Down' || e.key === 's') {
-        astronaut.y + 30 <= game.height - astronaut.height ? (astronaut.y += 30) : null;
+        astronaut.y + 32 <= game.height - astronaut.height ? (astronaut.y += 32) : null;
     }
     if (e.key === 'b') {
         console.log('shoot');
@@ -196,11 +196,11 @@ function spawnAlien2() {
 
     setTimeout(function () {
         let randomX = Math.floor(Math.random() * (game.width - 50));
-        let zeroY = game.height - 600;
+        let randomY = Math.floor(Math.random() * (game.width - 50));
         const alienType = [alienImg1, alienImg2, alienImg3, alienImg4];
         let randomIndex = Math.floor(Math.random() * (alienType.length - 1));
         let randomAlien = alienType[randomIndex];
-        alien2 = new Alien(randomX, zeroY, randomAlien, 50, 50)
+        alien2 = new Alien(randomX, randomY, randomAlien, 50, 50)
     }, 1000);
 }
 
@@ -209,11 +209,11 @@ function spawnAlien3() {
 
     setTimeout(function () {
         let randomX = Math.floor(Math.random() * (game.width - 50));
-        let zeroY = game.height - 600;
+        let randomY = Math.floor(Math.random() * (game.width - 50));
         const alienType = [alienImg1, alienImg2, alienImg3, alienImg4];
         let randomIndex = Math.floor(Math.random() * (alienType.length - 1));
         let randomAlien = alienType[randomIndex];
-        alien3 = new Alien(randomX, zeroY, randomAlien, 50, 50)
+        alien3 = new Alien(randomX, randomY, randomAlien, 50, 50)
     }, 1000);
 }
 
@@ -222,11 +222,11 @@ function spawnAlien4() {
 
     setTimeout(function () {
         let randomX = Math.floor(Math.random() * (game.width - 50));
-        let zeroY = game.height - 600;
+        let randomY = Math.floor(Math.random() * (game.width - 50));
         const alienType = [alienImg1, alienImg2, alienImg3, alienImg4];
         let randomIndex = Math.floor(Math.random() * (alienType.length - 1));
         let randomAlien = alienType[randomIndex];
-        alien4 = new Alien(randomX, zeroY, randomAlien, 50, 50)
+        alien4 = new Alien(randomX, randomY, randomAlien, 50, 50)
     }, 1000);
 }
 
