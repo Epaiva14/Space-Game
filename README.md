@@ -17,9 +17,9 @@ I also have obtained the canvas background from a google search, credit goes to 
 All other sprites were created by myself alone.
 
 ## Techniques used ~~~~
-This was to be created using HTML, CSS, and Javascript. Most of my code was written using JS but I did have some good use out of html and css to make things easier for me. This was my first game project using JS and i had a ton of fun doing it. I ran into a few problems but it worked out in the end.
+This was to be created using ```HTML```, ```CSS```, and ```Javascript```. Most of my code was written using ```JS``` but I did have some good use out of ```HTML``` and ```CSS``` to make things easier for me. This was my first game project using ```JS``` and I had a ton of fun doing it. I ran into a few problems but it worked out in the end.
 
-I had created a canvas in html for the play area of the game. Aside from that, i had used a bunch of aside tags to try and give content and buttons around the play area.
+I had created a canvas in html for the play area of the game. Aside from that, I had used a bunch of aside tags to try and give content and buttons around the play area.
 ```HTML
     <div id="playarea">
         <aside id="top-left">
@@ -80,7 +80,7 @@ class Alien {
 
 }
 ```
-Creating movement for the astronaut was easy, since i had to pretty much make everything manual according to what button was pressed.
+Creating movement for the astronaut was easy, since I had to pretty much make everything manual according to what button was pressed.
 
 As for the aliens? I had struggled trying to find the right lines of code and what x or y axis location i wanted the aliens to move about the screen, without disappearing competely.
 
@@ -149,7 +149,7 @@ function detectHit(player, opponent) {
 }
 ```
 
-lastly, with CSS, I ended up having fun saving it for last. It is probably still my weakest link in coding. I was enjoying playing around with the different styles. I still have alot more to learn, but heres a few things i was able to enjoy using.
+lastly, with ```CSS```, I ended up having fun saving it for last. It is probably still my weakest link in coding. I was enjoying playing around with the different styles. I still have alot more to learn, but heres a few things i was able to enjoy using.
 
 ```CSS
 canvas {

@@ -23,6 +23,7 @@ const restartButton = document.getElementById('reset');
 // loads all characters in the game
 window.addEventListener('DOMContentLoaded', function () {
     astronaut = new Spaceman(game.height / 2, game.width / 2);
+    console.log('astronaut y position', astronaut.y);
     alien1 = new Alien(0, 0, alienImg1);
     alien2 = new Alien(200, 560, alienImg2);
     alien3 = new Alien(400, 0, alienImg3);
@@ -109,11 +110,11 @@ function spaceWalk(e) {
     } else if (e.key === 'Arrow Down' || e.key === 's') {
         astronaut.y + 32 <= game.height - astronaut.height ? (astronaut.y += 32) : null;
     }
-    if (e.key === 'b') {
-        console.log('shoot');
-        plasmaWeapon.update(astronaut.x, astronaut.y);
-        plasmaWeapon.render();
-    }
+    // if (e.key === 'b') {
+    //     console.log('shoot');
+    //     plasmaWeapon.update(astronaut.x, astronaut.y);
+    //     plasmaWeapon.render();
+    // }
 }
 
 // function shoot() {
