@@ -9,7 +9,7 @@ My first impression of the game was this, to start simple and clean, and give my
 
 1. ```Fork``` and ```Clone``` this repository to your local machine
 2. Open ```index.html``` in your browser to play
-
+3. You can play via : https://alien-collector.netlify.app/
 
 credit:
 I have obtained the background image from opengameart.org.
@@ -20,6 +20,8 @@ All other sprites were created by myself alone.
 This was to be created using ```HTML```, ```CSS```, and ```Javascript```. Most of my code was written using ```JS``` but I did have some good use out of ```HTML``` and ```CSS``` to make things easier for me. This was my first game project using ```JS``` and I had a ton of fun doing it. I ran into a few problems but it worked out in the end.
 
 I had created a canvas in html for the play area of the game. Aside from that, I had used a bunch of aside tags to try and give content and buttons around the play area.
+
+## HTML
 ```HTML
     <div id="playarea">
         <aside id="top-left">
@@ -43,7 +45,7 @@ I had created a canvas in html for the play area of the game. Aside from that, I
         <canvas id="game"><!-- this is where the game is played --></canvas>
     </div>
 ```
-
+## Javascript
 I used classes to separate the aliens and the astronaut.
 ```JS
 class Spaceman {
@@ -148,9 +150,8 @@ function detectHit(player, opponent) {
     }
 }
 ```
-
+## CSS
 lastly, with ```CSS```, I ended up having fun saving it for last. It is probably still my weakest link in coding. I was enjoying playing around with the different styles. I still have alot more to learn, but heres a few things i was able to enjoy using.
-
 ```CSS
 canvas {
     background-image: url(./img/space-asteroid-surface-planet-with-craters-surface-space-planets-landscape-comet-crater-cartoon-illustration_102902-834.jpg);
@@ -168,7 +169,10 @@ canvas {
 
 I thought the box shadow is a really cool feature! It gives the canvas a pop out feature. All thanks to my instructor Avisa! Aside from all of that, I had used a ton of ```display: grid;```. I find that much easier to use than flex, but I would like to practice with either to get a better understanding of both of them.
 
+
+## End Statement
 Well? Try to collect each alien within 30 seconds, I made it a little easier, but challenging. My first few go's without any tweaks was nearly impossible, but as soon as i was able to beat my own game several times, I recognized that it was a playable and enjoyable AND challenging game.
 
+## Future thoughts
 The only other ideas i have for the future, are to implement different weapons, and give the aliens different motions. Where if i could make the aliens move away from the astronaut, or if the astronaut could use some kind of grabbing mechanism with a weapon of some sort. Maybe add lives, or add a jar to show all the aliens being collected into the jar. These are all ideas I have thought about and maybe I can implement into the future.
 
