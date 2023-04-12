@@ -4,6 +4,7 @@ This game has had alot of changes, and will continue to have changes. I so far a
 
 My first impression of the game was this, to start simple and clean, and give myself time to brainstorm the different ways i would start this process.
 ![Excalidraw example](img/Desktop%20Screenshot%202023.04.01%20-%2020.46.20.11.png)
+![background image](img/preview-1.jpg)
 
 ## Getting Started
 
@@ -11,9 +12,10 @@ My first impression of the game was this, to start simple and clean, and give my
 2. Open ```index.html``` in your browser to play
 3. You can play via : https://alien-collector.netlify.app/
 
-credit:
+## Credit:
 I have obtained the background image from opengameart.org.
 I also have obtained the canvas background from a google search, credit goes to Shames JCC, @ shamesjcc.org.
+
 All other sprites were created by myself alone.
 
 ## Techniques used ~~~~
@@ -171,8 +173,8 @@ I thought the box shadow is a really cool feature! It gives the canvas a pop out
 
 
 ## End Statement
-Well? Try to collect each alien within 30 seconds, I made it a little easier, but challenging. My first few go's without any tweaks was nearly impossible, but as soon as i was able to beat my own game several times, I recognized that it was a playable and enjoyable AND challenging game.
+Well? Try to collect each alien within 30 seconds, I made it a little easier, but challenging. My first few go's without any tweaks was nearly impossible, but as soon as I was able to beat my own game several times, I recognized that it was a playable, enjoyable AND challenging game.
 
 ## Future thoughts
-The only other ideas i have for the future, are to implement different weapons, and give the aliens different motions. Where if i could make the aliens move away from the astronaut, or if the astronaut could use some kind of grabbing mechanism with a weapon of some sort. Maybe add lives, or add a jar to show all the aliens being collected into the jar. These are all ideas I have thought about and maybe I can implement into the future.
+As for the other ideas I have for the future, are to implement different weapons, and give the aliens different motions. Where I can make the aliens move away from the astronaut. The astronaut could use some kind of grabbing mechanism with a weapon of some sort. Maybe add lives, or add a jar to show all the aliens being collected into the jar. These are all ideas I have thought about and plan to implement into the future. I want this game to be more complex, and have different features. It would be nice to have a story, about how astronauts found aliens and why they are collecting them, saving them maybe. Who knows why humans could be the reason aliens are looking for life in the universe.
 
