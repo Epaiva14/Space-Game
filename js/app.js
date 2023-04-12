@@ -109,6 +109,7 @@ function spaceWalk(e) {
         astronaut.y - 32 >= 0 ? (astronaut.y -= 32) : null;
     } else if (e.key === 'Arrow Down' || e.key === 's') {
         astronaut.y + 32 <= game.height - astronaut.height ? (astronaut.y += 32) : null;
+        console.log('Astronaut location', astronaut.y);
     }
     // if (e.key === 'b') {
     //     console.log('shoot');
